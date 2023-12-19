@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.project1</groupId>
+  <artifactId>BestBuyProject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>BestBuyProject</name>
+  <url>http://maven.apache.org</url>
+  
+  <build>
+        <plugins>
+            <!-- Maven Surefire Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>BestBuy.java</suiteXmlFile>
+					</suiteXmlFiles>
+                    <!-- You can configure additional options here -->
+                    <skipTests>false</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.3.2</version>
+</dependency>
+    
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.16.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.maven.plugin-tools/maven-plugin-annotations -->
+<dependency>
+    <groupId>org.apache.maven.plugin-tools</groupId>
+    <artifactId>maven-plugin-annotations</artifactId>
+    <version>3.10.2</version>
+    <scope>provided</scope>
+</dependency>
+
+
+  	<dependency>
+  		<groupId>maven.project</groupId>
+  		<artifactId>BestBuy</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>Learning</groupId>
+  		<artifactId>LearningAutomation</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
+</project>
